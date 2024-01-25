@@ -1,0 +1,448 @@
+25-Jan-24 12:44:53 - INFO - start_polling - Start polling  
+25-Jan-24 12:44:55 - INFO - _polling - Run polling for bot @Tat_gptbot id=6313762964 - 'tatgpt'  
+25-Jan-24 12:45:04 - INFO - feed_update - Update id=234062789 is handled. Duration 573 ms by bot id=6313762964  
+25-Jan-24 12:45:28 - INFO - _send_single_request - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 403 Forbidden"  
+25-Jan-24 12:45:28 - ERROR - error_handler - Traceback (most recent call last):
+  File "/home/ilmir/PycharmProjects/pyTGBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/home/ilmir/PycharmProjects/pyTGBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/home/ilmir/PycharmProjects/pyTGBot/venv/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/home/ilmir/PycharmProjects/pyTGBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 120, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/ilmir/PycharmProjects/pyTGBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+  File "/home/ilmir/PycharmProjects/pyTGBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 275, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/ilmir/PycharmProjects/pyTGBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/ilmir/PycharmProjects/pyTGBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 111, in _wrapped
+    return await self._propagate_event(
+  File "/home/ilmir/PycharmProjects/pyTGBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/ilmir/PycharmProjects/pyTGBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/ilmir/PycharmProjects/pyTGBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 111, in _wrapped
+    return await self._propagate_event(
+  File "/home/ilmir/PycharmProjects/pyTGBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/home/ilmir/PycharmProjects/pyTGBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 120, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/ilmir/PycharmProjects/pyTGBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+  File "/home/ilmir/PycharmProjects/TatarAIBot/bot/handlers/messages.py", line 14, in all_messages
+    gpt_response = get_gpt_response(text=text_ru)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/gpt/__main__.py", line 10, in get_gpt_response
+    completion = client.chat.completions.create(
+  File "/home/ilmir/PycharmProjects/pyTGBot/venv/lib/python3.10/site-packages/openai/_utils/_utils.py", line 271, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ilmir/PycharmProjects/pyTGBot/venv/lib/python3.10/site-packages/openai/resources/chat/completions.py", line 648, in create
+    return self._post(
+  File "/home/ilmir/PycharmProjects/pyTGBot/venv/lib/python3.10/site-packages/openai/_base_client.py", line 1179, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/home/ilmir/PycharmProjects/pyTGBot/venv/lib/python3.10/site-packages/openai/_base_client.py", line 868, in request
+    return self._request(
+  File "/home/ilmir/PycharmProjects/pyTGBot/venv/lib/python3.10/site-packages/openai/_base_client.py", line 959, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.PermissionDeniedError: <!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+<title>Attention Required! | Cloudflare</title>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/cf.errors.css" />
+<!--[if lt IE 9]><link rel="stylesheet" id='cf_styles-ie-css' href="/cdn-cgi/styles/cf.errors.ie.css" /><![endif]-->
+<style>body{margin:0;padding:0}</style>
+
+
+<!--[if gte IE 10]><!-->
+<script>
+  if (!navigator.cookieEnabled) {
+    window.addEventListener('DOMContentLoaded', function () {
+      var cookieEl = document.getElementById('cookie-alert');
+      cookieEl.style.display = 'block';
+    })
+  }
+</script>
+<!--<![endif]-->
+
+
+</head>
+<body>
+  <div id="cf-wrapper">
+    <div class="cf-alert cf-alert-error cf-cookie-error" id="cookie-alert" data-translate="enable_cookies">Please enable cookies.</div>
+    <div id="cf-error-details" class="cf-error-details-wrapper">
+      <div class="cf-wrapper cf-header cf-error-overview">
+        <h1 data-translate="block_headline">Sorry, you have been blocked</h1>
+        <h2 class="cf-subheadline"><span data-translate="unable_to_access">You are unable to access</span> api.openai.com</h2>
+      </div><!-- /.header -->
+
+      <div class="cf-section cf-highlight">
+        <div class="cf-wrapper">
+          <div class="cf-screenshot-container cf-screenshot-full">
+            
+              <span class="cf-no-screenshot error"></span>
+            
+          </div>
+        </div>
+      </div><!-- /.captcha-container -->
+
+      <div class="cf-section cf-wrapper">
+        <div class="cf-columns two">
+          <div class="cf-column">
+            <h2 data-translate="blocked_why_headline">Why have I been blocked?</h2>
+
+            <p data-translate="blocked_why_detail">This website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data.</p>
+          </div>
+
+          <div class="cf-column">
+            <h2 data-translate="blocked_resolve_headline">What can I do to resolve this?</h2>
+
+            <p data-translate="blocked_resolve_detail">You can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page.</p>
+          </div>
+        </div>
+      </div><!-- /.section -->
+
+      <div class="cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300">
+  <p class="text-13">
+    <span class="cf-footer-item sm:block sm:mb-1">Cloudflare Ray ID: <strong class="font-semibold">84af955ecf641498</strong></span>
+    <span class="cf-footer-separator sm:hidden">&bull;</span>
+    <span id="cf-footer-item-ip" class="cf-footer-item hidden sm:block sm:mb-1">
+      Your IP:
+      <button type="button" id="cf-footer-ip-reveal" class="cf-footer-ip-reveal-btn">Click to reveal</button>
+      <span class="hidden" id="cf-footer-ip">85.140.2.67</span>
+      <span class="cf-footer-separator sm:hidden">&bull;</span>
+    </span>
+    <span class="cf-footer-item sm:block sm:mb-1"><span>Performance &amp; security by</span> <a rel="noopener noreferrer" href="https://www.cloudflare.com/5xx-error-landing" id="brand_link" target="_blank">Cloudflare</a></span>
+    
+  </p>
+  <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
+</div><!-- /.error-footer -->
+
+
+    </div><!-- /#cf-error-details -->
+  </div><!-- /#cf-wrapper -->
+
+  <script>
+  window._cf_translation = {};
+  
+  
+</script>
+
+</body>
+</html>
+  
+25-Jan-24 12:45:28 - INFO - feed_update - Update id=234062790 is handled. Duration 1830 ms by bot id=6313762964  
+25-Jan-24 12:47:18 - WARNING - _signal_stop_polling - Received SIGINT signal  
+25-Jan-24 12:47:18 - INFO - _polling - Polling stopped for bot @Tat_gptbot id=6313762964 - 'tatgpt'  
+25-Jan-24 12:47:18 - INFO - start_polling - Polling stopped  
+25-Jan-24 12:47:22 - INFO - start_polling - Start polling  
+25-Jan-24 12:47:22 - INFO - _polling - Run polling for bot @Tat_gptbot id=6313762964 - 'tatgpt'  
+25-Jan-24 12:48:45 - INFO - _send_single_request - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 403 Forbidden"  
+25-Jan-24 12:48:45 - ERROR - error_handler - Traceback (most recent call last):
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 120, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 275, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 111, in _wrapped
+    return await self._propagate_event(
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 111, in _wrapped
+    return await self._propagate_event(
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 120, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+  File "/home/ilmir/PycharmProjects/TatarAIBot/bot/handlers/messages.py", line 14, in all_messages
+    gpt_response = get_gpt_response(text=text_ru)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/gpt/__main__.py", line 10, in get_gpt_response
+    completion = client.chat.completions.create(
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/openai/_utils/_utils.py", line 271, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/openai/resources/chat/completions.py", line 648, in create
+    return self._post(
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/openai/_base_client.py", line 1179, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/openai/_base_client.py", line 868, in request
+    return self._request(
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/openai/_base_client.py", line 959, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.PermissionDeniedError: <!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+<title>Attention Required! | Cloudflare</title>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/cf.errors.css" />
+<!--[if lt IE 9]><link rel="stylesheet" id='cf_styles-ie-css' href="/cdn-cgi/styles/cf.errors.ie.css" /><![endif]-->
+<style>body{margin:0;padding:0}</style>
+
+
+<!--[if gte IE 10]><!-->
+<script>
+  if (!navigator.cookieEnabled) {
+    window.addEventListener('DOMContentLoaded', function () {
+      var cookieEl = document.getElementById('cookie-alert');
+      cookieEl.style.display = 'block';
+    })
+  }
+</script>
+<!--<![endif]-->
+
+
+</head>
+<body>
+  <div id="cf-wrapper">
+    <div class="cf-alert cf-alert-error cf-cookie-error" id="cookie-alert" data-translate="enable_cookies">Please enable cookies.</div>
+    <div id="cf-error-details" class="cf-error-details-wrapper">
+      <div class="cf-wrapper cf-header cf-error-overview">
+        <h1 data-translate="block_headline">Sorry, you have been blocked</h1>
+        <h2 class="cf-subheadline"><span data-translate="unable_to_access">You are unable to access</span> api.openai.com</h2>
+      </div><!-- /.header -->
+
+      <div class="cf-section cf-highlight">
+        <div class="cf-wrapper">
+          <div class="cf-screenshot-container cf-screenshot-full">
+            
+              <span class="cf-no-screenshot error"></span>
+            
+          </div>
+        </div>
+      </div><!-- /.captcha-container -->
+
+      <div class="cf-section cf-wrapper">
+        <div class="cf-columns two">
+          <div class="cf-column">
+            <h2 data-translate="blocked_why_headline">Why have I been blocked?</h2>
+
+            <p data-translate="blocked_why_detail">This website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data.</p>
+          </div>
+
+          <div class="cf-column">
+            <h2 data-translate="blocked_resolve_headline">What can I do to resolve this?</h2>
+
+            <p data-translate="blocked_resolve_detail">You can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page.</p>
+          </div>
+        </div>
+      </div><!-- /.section -->
+
+      <div class="cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300">
+  <p class="text-13">
+    <span class="cf-footer-item sm:block sm:mb-1">Cloudflare Ray ID: <strong class="font-semibold">84af9a2dcfea169b</strong></span>
+    <span class="cf-footer-separator sm:hidden">&bull;</span>
+    <span id="cf-footer-item-ip" class="cf-footer-item hidden sm:block sm:mb-1">
+      Your IP:
+      <button type="button" id="cf-footer-ip-reveal" class="cf-footer-ip-reveal-btn">Click to reveal</button>
+      <span class="hidden" id="cf-footer-ip">85.140.2.67</span>
+      <span class="cf-footer-separator sm:hidden">&bull;</span>
+    </span>
+    <span class="cf-footer-item sm:block sm:mb-1"><span>Performance &amp; security by</span> <a rel="noopener noreferrer" href="https://www.cloudflare.com/5xx-error-landing" id="brand_link" target="_blank">Cloudflare</a></span>
+    
+  </p>
+  <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
+</div><!-- /.error-footer -->
+
+
+    </div><!-- /#cf-error-details -->
+  </div><!-- /#cf-wrapper -->
+
+  <script>
+  window._cf_translation = {};
+  
+  
+</script>
+
+</body>
+</html>
+  
+25-Jan-24 12:48:45 - INFO - feed_update - Update id=234062791 is handled. Duration 944 ms by bot id=6313762964  
+25-Jan-24 12:49:09 - WARNING - _signal_stop_polling - Received SIGINT signal  
+25-Jan-24 12:49:09 - INFO - _polling - Polling stopped for bot @Tat_gptbot id=6313762964 - 'tatgpt'  
+25-Jan-24 12:49:09 - INFO - start_polling - Polling stopped  
+25-Jan-24 12:49:12 - INFO - start_polling - Start polling  
+25-Jan-24 12:49:13 - INFO - _polling - Run polling for bot @Tat_gptbot id=6313762964 - 'tatgpt'  
+25-Jan-24 12:49:43 - WARNING - _signal_stop_polling - Received SIGINT signal  
+25-Jan-24 12:49:43 - INFO - _polling - Polling stopped for bot @Tat_gptbot id=6313762964 - 'tatgpt'  
+25-Jan-24 12:49:43 - INFO - start_polling - Polling stopped  
+25-Jan-24 12:49:47 - INFO - start_polling - Start polling  
+25-Jan-24 12:49:48 - INFO - _polling - Run polling for bot @Tat_gptbot id=6313762964 - 'tatgpt'  
+25-Jan-24 12:49:57 - INFO - feed_update - Update id=234062792 is handled. Duration 653 ms by bot id=6313762964  
+25-Jan-24 12:50:08 - INFO - _send_single_request - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"  
+25-Jan-24 12:50:10 - INFO - feed_update - Update id=234062793 is handled. Duration 11013 ms by bot id=6313762964  
+25-Jan-24 12:52:00 - INFO - _send_single_request - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"  
+25-Jan-24 12:52:03 - INFO - feed_update - Update id=234062794 is handled. Duration 6960 ms by bot id=6313762964  
+25-Jan-24 12:52:54 - INFO - _send_single_request - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"  
+25-Jan-24 12:52:57 - INFO - feed_update - Update id=234062795 is handled. Duration 14998 ms by bot id=6313762964  
+25-Jan-24 12:54:47 - INFO - feed_update - Update id=234062796 is handled. Duration 1022 ms by bot id=6313762964  
+25-Jan-24 12:55:01 - INFO - _send_single_request - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"  
+25-Jan-24 12:55:04 - INFO - feed_update - Update id=234062797 is handled. Duration 7981 ms by bot id=6313762964  
+25-Jan-24 12:55:47 - INFO - feed_update - Update id=234062798 is handled. Duration 1222 ms by bot id=6313762964  
+25-Jan-24 12:55:50 - INFO - feed_update - Update id=234062799 is handled. Duration 202 ms by bot id=6313762964  
+25-Jan-24 12:56:15 - INFO - _send_single_request - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"  
+25-Jan-24 12:56:17 - INFO - feed_update - Update id=234062800 is handled. Duration 6756 ms by bot id=6313762964  
+25-Jan-24 12:56:30 - INFO - _retry_request - Retrying request to /chat/completions in 0.965684 seconds  
+25-Jan-24 12:56:35 - INFO - _send_single_request - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"  
+25-Jan-24 12:56:37 - INFO - feed_update - Update id=234062801 is handled. Duration 11365 ms by bot id=6313762964  
+25-Jan-24 12:56:56 - INFO - feed_update - Update id=234062802 is handled. Duration 1327 ms by bot id=6313762964  
+25-Jan-24 12:57:41 - INFO - _send_single_request - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"  
+25-Jan-24 12:57:54 - INFO - _send_single_request - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"  
+25-Jan-24 12:58:02 - INFO - _send_single_request - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"  
+25-Jan-24 12:58:07 - INFO - _send_single_request - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"  
+25-Jan-24 12:58:08 - INFO - feed_update - Update id=234062803 is handled. Duration 38093 ms by bot id=6313762964  
+25-Jan-24 12:58:08 - INFO - feed_update - Update id=234062804 is handled. Duration 25388 ms by bot id=6313762964  
+25-Jan-24 12:58:09 - INFO - feed_update - Update id=234062806 is handled. Duration 5832 ms by bot id=6313762964  
+25-Jan-24 12:58:09 - INFO - feed_update - Update id=234062805 is handled. Duration 14233 ms by bot id=6313762964  
+25-Jan-24 12:58:35 - INFO - _send_single_request - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"  
+25-Jan-24 13:00:50 - ERROR - error_handler - Traceback (most recent call last):
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 491, in _make_request
+    raise new_e
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 467, in _make_request
+    self._validate_conn(conn)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1096, in _validate_conn
+    conn.connect()
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/urllib3/connection.py", line 642, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/urllib3/connection.py", line 782, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 470, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 514, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/lib/python3.10/ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/lib/python3.10/ssl.py", line 1100, in _create
+    self.do_handshake()
+  File "/usr/lib/python3.10/ssl.py", line 1371, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/urllib3/util/retry.py", line 470, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 491, in _make_request
+    raise new_e
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 467, in _make_request
+    self._validate_conn(conn)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1096, in _validate_conn
+    conn.connect()
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/urllib3/connection.py", line 642, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/urllib3/connection.py", line 782, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 470, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/urllib3/util/ssl_.py", line 514, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/lib/python3.10/ssl.py", line 513, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/lib/python3.10/ssl.py", line 1100, in _create
+    self.do_handshake()
+  File "/usr/lib/python3.10/ssl.py", line 1371, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 27, in __call__
+    return await handler(event, data)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/aiogram/fsm/middleware.py", line 41, in __call__
+    return await handler(event, data)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 120, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/dispatcher.py", line 275, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 111, in _wrapped
+    return await self._propagate_event(
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 111, in _wrapped
+    return await self._propagate_event(
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/telegram.py", line 120, in trigger
+    return await wrapped_inner(event, kwargs)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/aiogram/dispatcher/event/handler.py", line 42, in call
+    return await wrapped()
+  File "/home/ilmir/PycharmProjects/TatarAIBot/bot/handlers/messages.py", line 16, in all_messages
+    resp_tt = get_translation([gpt_response], 'ru', 'tt')[0]
+  File "/home/ilmir/PycharmProjects/TatarAIBot/translater/__main__.py", line 19, in get_translation
+    result = requests.post(TRANSLATER_URL, json=data,
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/ilmir/PycharmProjects/TatarAIBot/venv/lib/python3.10/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+  
+25-Jan-24 13:00:50 - INFO - feed_update - Update id=234062807 is handled. Duration 143196 ms by bot id=6313762964  
+25-Jan-24 13:00:50 - ERROR - _listen_updates - Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error  
+25-Jan-24 13:00:50 - WARNING - _listen_updates - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 6313762964)  
+25-Jan-24 13:00:52 - INFO - _listen_updates - Connection established (tryings = 1, bot id = 6313762964)  
+25-Jan-24 13:00:55 - INFO - _send_single_request - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"  
+25-Jan-24 13:01:17 - INFO - _send_single_request - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"  
+25-Jan-24 13:01:21 - INFO - feed_update - Update id=234062809 is handled. Duration 25190 ms by bot id=6313762964  
+25-Jan-24 13:01:21 - INFO - feed_update - Update id=234062808 is handled. Duration 29014 ms by bot id=6313762964  
+25-Jan-24 13:05:31 - WARNING - _signal_stop_polling - Received SIGINT signal  
+25-Jan-24 13:05:31 - INFO - _polling - Polling stopped for bot @Tat_gptbot id=6313762964 - 'tatgpt'  
+25-Jan-24 13:05:31 - INFO - start_polling - Polling stopped  
+25-Jan-24 13:05:34 - INFO - start_polling - Start polling  
+25-Jan-24 13:05:36 - INFO - _polling - Run polling for bot @Tat_gptbot id=6313762964 - 'tatgpt'  
+25-Jan-24 13:06:45 - INFO - _send_single_request - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"  
+25-Jan-24 13:06:48 - INFO - feed_update - Update id=234062810 is handled. Duration 20810 ms by bot id=6313762964  
+25-Jan-24 13:17:00 - WARNING - _signal_stop_polling - Received SIGINT signal  
+25-Jan-24 13:17:00 - INFO - _polling - Polling stopped for bot @Tat_gptbot id=6313762964 - 'tatgpt'  
+25-Jan-24 13:17:00 - INFO - start_polling - Polling stopped  
