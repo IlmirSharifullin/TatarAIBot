@@ -11,8 +11,7 @@ def get_gpt_response(text: str, role: str = '', temperature: float = 0.5):
         model="gpt-4",
         messages=[
             {"role": "user", "content": f'{text}'}
-        ],
-        temperature=temperature,
+        ]
     )
 
     return completion.choices[0].message.content
