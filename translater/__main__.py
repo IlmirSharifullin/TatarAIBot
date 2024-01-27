@@ -1,4 +1,4 @@
-from typing import Literal
+from typing import Literal, Optional
 
 import requests
 
@@ -16,7 +16,23 @@ def get_translation(texts: list, source_lang: Literal['tt', 'ru'], target_lang: 
         "texts": texts
     }
 
-    result = requests.post(TRANSLATER_URL, json=data,
+    result = requests.post(TRANSLATER_URL + 'translate', json=data,
                            headers=headers)
-    print(result.json())
     return list(map(lambda x: x['text'], result.json()['translations']))
+
+
+def detect_language(text, language_code_hints=None) -> Optional[str]:
+    if language_code_hints is None:
+        language_code_hints = ['tt', 'ru']
+
+    data = {
+        'text': text,
+        'languageCodeHints': language_code_hints
+    }
+
+    result = requests.post(TRANSLATER_URL + 'detect', json=data, headers=headers)
+
+    if result:
+        return result.json()['languageCode']
+    else:
+        return None
