@@ -8,7 +8,7 @@ client = OpenAI()
 
 def get_gpt_response(text: str, role: str = '', temperature: float = 0.5):
     completion = client.chat.completions.create(
-        model="gpt-4",
+        model="gpt-3.5-turbo",
         messages=[
             {"role": "user", "content": f'{text}'}
         ]
