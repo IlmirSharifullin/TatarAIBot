@@ -20,7 +20,6 @@ def log_to_channel(msg, type='info'):
 
 async def main():
     logging.basicConfig(
-        filename='logs.log',
         format='%(asctime)s - %(levelname)s - %(funcName)s - %(message)s  ',
         datefmt='%d-%b-%y %H:%M:%S',
         level=logging.INFO
