@@ -18,7 +18,7 @@ async def all_messages(message: Message):
     debug_info = []
     language = detect_language(message.text)
     language_detect_time = datetime.datetime.now()
-    debug_info.append('detect_language:' + str(language_detect_time - start_time) + '\n' + language)
+    debug_info.append(f'detect_language: {language_detect_time - start_time}\n{language}')
 
     if language == 'tt':
         text = get_translation([message.text], 'tt', 'ru')[0]
