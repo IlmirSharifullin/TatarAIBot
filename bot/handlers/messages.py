@@ -39,7 +39,4 @@ async def all_messages(message: Message):
         resp = gpt_response
 
     debug_info_str = '\n'.join(debug_info)
-    ans = (f'{resp}'
-           f'{debug_info_str}')
-    print(ans)
-    await msg.edit_text(text=ans, parse_mode=None)
+    await msg.edit_text(text=resp, parse_mode=None)
