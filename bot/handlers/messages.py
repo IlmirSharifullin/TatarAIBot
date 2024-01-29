@@ -11,7 +11,6 @@ router = Router(name='messages-router')
 
 @router.message()
 async def all_messages(message: Message):
-    msg = await message.answer('Бер-ике секунд бирегез инде⏳')
 
     start_time = datetime.datetime.now()
 
@@ -21,9 +20,13 @@ async def all_messages(message: Message):
     debug_info.append(f'detect_language: {language_detect_time - start_time}\n{language}')
 
     if language == 'tt':
+        msg = await message.answer('Бер-ике секунд бирегез инде⏳')
+
         text = get_translation([message.text], 'tt', 'ru')[0]
         debug_info.append('translation:' + str(datetime.datetime.now() - start_time))
     else:
+        msg = await message.answer('Подождите пару секунд⏳')
+
         text = message.text
 
     gpt_response = get_gpt_response(text=text)
