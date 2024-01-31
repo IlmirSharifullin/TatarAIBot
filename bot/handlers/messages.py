@@ -24,14 +24,15 @@ async def all_messages(message: Message):
     language_detect_time = datetime.datetime.now()
     debug_info.append(f'detect_language: {language_detect_time - start_time}\n{language}')
 
-    if language == 'tt':
+    if mode == AIModeEnum.TT:
         msg = await message.answer('Бер-ике секунд бирегез инде⏳')
-
-        text = get_translation([message.text], 'tt', 'ru')[0]
-        debug_info.append('translation:' + str(datetime.datetime.now() - start_time))
     else:
         msg = await message.answer('Подождите пару секунд⏳')
 
+    if language == 'tt':
+        text = get_translation([message.text], 'tt', 'ru')[0]
+        debug_info.append('translation:' + str(datetime.datetime.now() - start_time))
+    else:
         text = message.text
 
     gpt_response = get_gpt_response(text=text)
