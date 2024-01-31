@@ -15,7 +15,7 @@ async def switch_tt(message: Message):
         print(ex)
         await message.answer('Произошла ошибка, попробуйте позже')
     else:
-        await message.answer('Режим сменен на татарский')
+        await message.answer('Татарча сөйләшәм')
 
 
 @router.message(F.text == 'Русский')
@@ -26,4 +26,4 @@ async def switch_tt(message: Message):
         print(ex)
         await message.answer('Произошла ошибка, попробуйте позже')
     else:
-        await message.answer('Режим сменен на русский')
+        await message.answer('Отвечаю на русском языке')
