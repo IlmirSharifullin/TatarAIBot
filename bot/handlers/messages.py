@@ -3,14 +3,19 @@ import datetime
 from aiogram import Router
 from aiogram.types import Message
 
+from db.models import AIModeEnum
 from gpt.__main__ import get_gpt_response
 from translater.__main__ import get_translation, detect_language
+
+import db.funcs as db
 
 router = Router(name='messages-router')
 
 
 @router.message()
 async def all_messages(message: Message):
+    user = await db.get_user_by_chat_id(message.from_user.id)
+    mode = AIModeEnum(user.mode)
 
     start_time = datetime.datetime.now()
 
@@ -32,11 +37,12 @@ async def all_messages(message: Message):
     gpt_response = get_gpt_response(text=text)
     debug_info.append('gpt response:' + str(datetime.datetime.now() - start_time))
 
-    if language == 'tt':
+    if mode == AIModeEnum.TT:
         resp = get_translation([gpt_response], 'ru', 'tt')[0]
         debug_info.append('translation2:' + str(datetime.datetime.now() - start_time))
-    else:
+    elif mode == AIModeEnum.RU:
         resp = gpt_response
+    else:
+        return await msg.delete()
 
-    debug_info_str = '\n'.join(debug_info)
     await msg.edit_text(text=resp, parse_mode=None)

@@ -8,7 +8,7 @@ from aiogram.types import ErrorEvent
 from aiogram.utils.callback_answer import CallbackAnswerMiddleware
 
 from bot.config import BOT_TOKEN
-from bot.handlers import callbacks, commands, messages
+from bot.handlers import callbacks, commands, messages, switch_language
 from config import LOGS_CHANNEL_ID
 
 
@@ -30,7 +30,7 @@ async def main():
 
     dp.callback_query.middleware(CallbackAnswerMiddleware())
 
-    dp.include_routers(callbacks.router, commands.router, messages.router)
+    dp.include_routers(commands.router, callbacks.router, switch_language.router, messages.router)
 
     @dp.error()
     async def error_handler(event: ErrorEvent):
